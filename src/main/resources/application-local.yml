@@ -1,0 +1,18 @@
+server:
+    port: 58585
+spring:
+    datasource:
+        url: jdbc:postgresql://localhost:5432/testdb
+        username: postgres
+        password: root
+    cache:
+        type: none
+    profiles:
+        include: swagger
+    jpa:
+        show-sql: true
+    flyway:
+        locations:/db/migration
+management:
+    security:
+        enabled: false
